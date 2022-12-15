@@ -2,6 +2,9 @@ import React from 'react'
 import './App.css'
 import Expenses from './components/Expenses';
 import NewExpense from './components/NewExpense';
+import Practice from './components/Practice'
+
+
 //App.js is a component that is imported in index.js 
 // It is default component  
 
@@ -31,6 +34,7 @@ import NewExpense from './components/NewExpense';
     <div>
       <NewExpense/>
        <Expenses items ={expenses}></Expenses>
+       <Practice></Practice>
     </div>
   )
 }

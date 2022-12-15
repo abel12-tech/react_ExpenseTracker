@@ -1,0 +1,11 @@
+form{
+    display: flex;
+    justify-content: space-evenly;
+}
+input{
+    outline: none;
+    padding: 10px;
+}
+.label_input{
+    margin: 3px;
+}
