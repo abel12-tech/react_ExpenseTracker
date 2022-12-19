@@ -1,41 +1,65 @@
-import React from 'react'
-import './App.css'
-import Expenses from './components/Expenses';
-import NewExpense from './components/NewExpense';
-import Practice from './components/Practice'
+import React, { useState } from 'react';
+
+import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/Expenses/Expenses';
+import Practice1 from './practice_what_I_have_learned/Practice1';
+
+// below is the initial expense i am work with
+
+const initialExpenses = [
+  {
+    id: 'e1',
+    title: 'Toilet Paper',
+    amount: 94.12,
+    date: new Date(2020, 7, 14),
+  },
+  { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: 'e3',
+    title: 'Car Insurance',
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
+  },
+  {
+    id: 'e4',
+    title: 'New Desk (Wooden)',
+    amount: 450,
+    date: new Date(2021, 5, 12),
+  },
+];
+
+const App = () => {
+
+  // for updating the initial expenses we have
+  const [expenses,setExpenses] =useState(initialExpenses)
 
 
-//App.js is a component that is imported in index.js 
-// It is default component  
+  const addExpenseHandler = expense => {
+    setExpenses((prevExpense)=>{
+      return [expense ,...prevExpense]
+    })
+    // or using as below
+    /*
+    setExpense([expense ,...expenses])
+    
+    
+    */
+  };
 
- function App() {
-  // ======Make your components reusable by using props concept that enables you to pass data between two components
-  const expenses =[
-    {
-      id:'e1',
-      title:'Toilet paper',
-      amount:90,
-      date:new Date()
-    },
-    {
-      id:'e2',
-      title:'New Tv',
-      amount:600,
-      date:new Date(2022,3,29),
-    },
-    {
-      id:'e3',
-      title:'Car Insurance',
-      amount:500,
-      date:new Date(2021,3,23),
-    }
-  ]
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+
   return (
     <div>
-      <NewExpense/>
-       <Expenses items ={expenses}></Expenses>
-       <Practice></Practice>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
+     <Practice1></Practice1>
     </div>
-  )
+  );
 }
+
 export default App;

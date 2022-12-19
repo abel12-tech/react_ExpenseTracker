@@ -1,0 +1,31 @@
+.practice{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+.practice_title{
+    text-align: center;
+}
+.form_div{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+}
+.label_input{
+    margin: 20px;
+}
+label{
+    margin-right: 10px;
+}
+input{
+    outline: none;
+    padding: 10px;
+}
+button{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}

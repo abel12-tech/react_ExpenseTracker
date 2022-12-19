@@ -1,0 +1,13 @@
+h2{
+    text-align: center;
+}
+
+.display_area{
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    border: 1px solid yellow;
+    margin-left: 430px;
+    background-color: rgb(24, 48, 92);
+    color: white;
+}

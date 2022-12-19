@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "adpyke.codesnap"
+        "adpyke.codesnap",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens"
     ]
 }
